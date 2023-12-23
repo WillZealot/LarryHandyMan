@@ -1,9 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import logo from '../img/tools.png';
 
 const Header = () => {
-  const [scrollPosition, setScrollPosition] = useState(0);
-
   const listItemStyle = {
     transition: 'transform 0.3s ease-in-out',
   };
@@ -16,32 +14,12 @@ const Header = () => {
     event.target.style.transform = 'scale(1)';
   };
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrollPosition(window.scrollY);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
-
-  const getBackgroundOpacity = () => {
-    // You can adjust the divisor to control the rate of opacity change
-    const opacity = 1 - scrollPosition / 800;
-    return opacity >= 0 ? opacity : 0;
+  const headerStyle = {
+    backgroundColor: 'white', // Set the background color to white
   };
 
   return (
-    <div
-      className="sticky top-0 z-50"
-      style={{
-        background: `linear-gradient(to bottom, rgba(255, 255, 255, ${getBackgroundOpacity()}), transparent)`,
-        transition: 'background 0.3s ease-in-out',
-      }}
-    >
+    <div className="sticky top-0 z-50" style={headerStyle}>
       <div className="flex items-center justify-between p-4">
         <div className="flex items-center">
           <img src={logo} alt="Logo" className="h-12 mr-4" />
