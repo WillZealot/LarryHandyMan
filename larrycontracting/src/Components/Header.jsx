@@ -14,10 +14,12 @@ const Header = () => {
 
   const handleHover = (event) => {
     event.target.style.transform = 'scale(1.1)';
+    event.target.style.color = '#FFA500'; // Darker orange color code
   };
 
   const handleLeave = (event) => {
     event.target.style.transform = 'scale(1)';
+    event.target.style.color = ''; // Reset the color to the default
   };
 
   return (
