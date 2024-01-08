@@ -1,8 +1,13 @@
+import React from 'react'
+import AboutHero from "../components/AboutHero";
+import AboutBody from '../components/AboutBody';
+
 
 const About = () => {
   return (
     <div>
-      <h1>About</h1>
+      <AboutHero />
+      <AboutBody />
     </div>
   );
 };
