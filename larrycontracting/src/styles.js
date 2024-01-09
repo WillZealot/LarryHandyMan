@@ -13,8 +13,42 @@ const styles = {
   sectionSubText:
     "sm:text-[18px] text-[14px] text-secondary uppercase tracking-wider",
 
-    
-    
+  hamburgerIcon: {
+    width: "30px",
+    height: "20px",
+    position: "relative",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "space-between",
+  },
+
+  hamburgerIconLine: {
+    width: "100%",
+    height: "4px",
+    backgroundColor: "#000",
+    transition: "all 0.3s ease-in-out",
+  },
+
+  hamburgerIconOpen: {
+    transform: "rotate(45deg) translateY(10px)",
+    backgroundColor: "#000",
+    transition: "all 0.5s ease-in-out",
+  },
+
+  hamburgerIconMiddle: {
+    opacity: 1,
+    transition: "all 0.5s ease-in-out",
+  },
+
+  hamburgerIconClose: {
+    transform: "rotate(-45deg) translateY(-10px)",
+    backgroundColor: "#000",
+    transition: "all 0.5s ease-in-out",
+  },
+
+  listItem: {
+    height: "15vh", // Each list item takes up 1/5 of the viewport height
+  },
 };
 
 export { styles };
