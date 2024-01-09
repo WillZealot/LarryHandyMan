@@ -29,13 +29,23 @@ const MainPage = () => {
   };
 
   return (
-    <div name="Home" className="w-full h-screen" style={backgroundStyle}>
-      <div className="bg-slate-800/70 py-4 md:bg-transparent">
+    <div
+      name="Home"
+      className="w-full h-screen pb-[3.5rem]"
+      style={backgroundStyle}
+    >
+      <div className="bg-slate-800/50 pt-14 md:bg-transparent h-fit">
         <Flex justify="center" p="4">
-          <Avatar size="8" src={tools} className="bg-slate-200/40" />
+          <Avatar
+            size="8"
+            src={tools}
+            className="bg-slate-100/70 animate-fadeInLeft"
+          />
         </Flex>
-        <h1 style={textStyle}>LARRYS GENERAL CONSTRUCTION LLC</h1>
-        <h1 style={textStyle} className="lg:opacity-70">
+        <h1 style={textStyle} className="animate-fadeInRight">
+          LARRYS GENERAL CONSTRUCTION LLC
+        </h1>
+        <h1 style={textStyle} className="lg:opacity-70 animate-fadeInRight">
           Your Local General Contractor
         </h1>
         <div style={lineStyle}></div>
@@ -44,7 +54,7 @@ const MainPage = () => {
           Improvements, Upgrades, Or Repairs!
         </h1>
         {/* Add any other elements or images here */}
-        <Flex p="6" justify="center" gap="6" className="flex-col md:flex-row">
+        <Flex p="5" justify="center" gap="4" className="flex-col md:flex-row">
           <Button color="green" size="4" radius="large" highContrast>
             Call Now : (407) 371-7701
           </Button>
