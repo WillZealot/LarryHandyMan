@@ -18,7 +18,7 @@ export const navLinks = [
   { name: "Contact Us", path: "/contact" },
 ];
 
-const services = [
+export const services = [
   {
     image: dryrot,
     title: "Dryrot Repair",
@@ -57,4 +57,13 @@ const services = [
   },
 ];
 
-export { services };
+export const IMAGES = [
+  {
+    service_id: "1",
+    url: "https://placekitten.com/1024/768?image=1",
+  },
+  {
+    service_id: "1",
+    url: "https://drive.google.com/uc?export=view&id=1IiNN7_WSzCXpI2rtsABDmzAMfprnWebG",
+  },
+];

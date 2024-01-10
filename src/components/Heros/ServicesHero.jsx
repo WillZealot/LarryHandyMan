@@ -4,7 +4,7 @@ import { styles } from "../../styles";
 const ServicesHero = () => {
   return (
     <div className="bg-services-hero bg-cover bg-no-repeat bg-center h-1/2">
-      <section className="relative w-full h-[80vh] mx-auto bg-slate-900/45">
+      <section className="relative w-full h-[90vh] mx-auto bg-slate-900/45">
         <div
           className={`${styles.paddingX} absolute inset-0 top-[120px] max-w-7xl mx-auto flex flex-row items-start gap-5`}
         >

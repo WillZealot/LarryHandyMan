@@ -17,7 +17,7 @@ const AboutHero = () => {
             <h1
               className={`${styles.heroHeadText} text-white animate-fadeInRight`}
             >
-              Bringing Quality Contracting to Central Florida
+              Bringing Quality Contracting to the Pacific Northwest
             </h1>
           </div>
         </div>
