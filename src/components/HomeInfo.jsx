@@ -1,5 +1,5 @@
+import { Button, Flex } from "@radix-ui/themes";
 import React from "react";
-import { Flex, Text, Button } from "@radix-ui/themes";
 import { Link } from "react-router-dom";
 
 const HomeInfo = () => {
@@ -25,9 +25,9 @@ const HomeInfo = () => {
           <li>Decks</li>
           <li>Patio Covers</li>
           <li>Flooring</li>
-          <li>Roofing</li>
-          <li>Insulation</li>
-          <li>Plumbing</li>
+          <li>Fire Damage</li>
+          <li>Painting</li>
+          <li>Demolition</li>
           <li>Electrical Wiring</li>
         </ul>
       </Flex>

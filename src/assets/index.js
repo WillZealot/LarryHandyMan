@@ -16,6 +16,7 @@ import about from "./heros/About-Hero.jpg";
 import contact from "./heros/Contact-Hero.jpg";
 import gallery from "./heros/Gallery-Hero.jpg";
 import services from "./heros/Services-Hero.jpg";
+import home from "./heros/Home-Hero.jpg";
 
 export {
   tools,
@@ -34,4 +35,5 @@ export {
   contact,
   gallery,
   services,
+  home,
 };
