@@ -10,6 +10,7 @@ import {
 } from "@radix-ui/themes";
 import React from "react";
 import { services } from "../constants";
+import { Link } from "react-router-dom";
 
 const ServiceCards = () => {
   return (
@@ -40,9 +41,11 @@ const ServiceCards = () => {
               <Button color="green" size="4" radius="full">
                 Request a Quote
               </Button>
-              <Button color="cyan" size="4" radius="full">
-                Gallery <ImageIcon width="18" height="18" />
-              </Button>
+              <Link to={`/gallery/${index + 1}`}>
+                <Button color="cyan" size="4" radius="full">
+                  Gallery <ImageIcon width="18" height="18" />
+                </Button>
+              </Link>
             </Flex>
           </Card>
         </Box>

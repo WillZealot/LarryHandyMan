@@ -8,27 +8,31 @@ function GalleryBody() {
   // Fetch your image based on the id and render it
 
   return (
-    <Flex justify="center" align="center" px="8">
+    <Flex justify="center" align="center" px="8" py="4">
       <Gallery>
-        {IMAGES.map((image, index) => (
-          <Item
-            key={index}
-            original={image.url}
-            thumbnail={image.url}
-            width="1024"
-            height="768"
-          >
-            {({ ref, open }) => (
-              <img
-                ref={ref}
-                onClick={open}
-                src={image.url}
-                alt=""
-                className="w-96 h-96"
-              />
-            )}
-          </Item>
-        ))}
+        <div className="grid md:grid-cols-4 gap-2">
+          {IMAGES.map((image, index) => (
+            <div className="col-span-1 ">
+              <Item
+                key={index}
+                original={image.url}
+                thumbnail={image.url}
+                width="1024"
+                height="768"
+              >
+                {({ ref, open }) => (
+                  <img
+                    ref={ref}
+                    onClick={open}
+                    src={image.url}
+                    alt=""
+                    className="w-96 h-96"
+                  />
+                )}
+              </Item>
+            </div>
+          ))}
+        </div>
       </Gallery>
     </Flex>
   );
