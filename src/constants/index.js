@@ -1,5 +1,6 @@
 import {
-  deck,
+  painting,
+  demolition,
   dryrot,
   patiocovers,
   windowreplace,
@@ -69,11 +70,11 @@ export const services = [
   },
   {
     service_id: "7",
-    image: deck,
-    title: "Decks",
-    header: "Expand Your Living Space",
-    body: "Our custom-built decks are designed to suit your lifestyle and budget. Whether you're looking for a space to entertain or a quiet spot to relax, we've got you covered.",
-    slogan: "Decking Out Your Outdoor Dreams",
+    image: painting,
+    title: "Painting",
+    header: "Color Your World",
+    body: "Our professional painting services can transform your space. We use high-quality paints and precise techniques to ensure a flawless finish, whether you're updating a single room or your entire home.",
+    slogan: "Painting Perfection in Every Stroke",
   },
   {
     service_id: "8",
@@ -85,62 +86,11 @@ export const services = [
   },
   {
     service_id: "9",
-    image: flooring,
-    title: "Flooring",
-    header: "Step into Style",
-    body: "From hardwood to tile, we offer a wide range of flooring options to suit your style and needs. Our expert installation ensures your floors look great and last long.",
-    slogan: "Floors That Ground Your Home",
-  },
-];
-
-export const IMAGES = [
-  {
-    service_id: "1",
-    url: "https://i.imgur.com/opayjjc.jpg",
-  },
-  {
-    service_id: "1",
-    url: "https://i.imgur.com/6YwsJXi.jpg",
-  },
-  {
-    service_id: "2",
-    url: "https://i.imgur.com/ePSDFFe.jpg",
-  },
-  {
-    service_id: "2",
-    url: "https://i.imgur.com/zsnEIYE.jpg",
-  },
-  {
-    service_id: "1",
-    url: "https://i.imgur.com/opayjjc.jpg",
-  },
-  {
-    service_id: "1",
-    url: "https://i.imgur.com/6YwsJXi.jpg",
-  },
-  {
-    service_id: "2",
-    url: "https://i.imgur.com/ePSDFFe.jpg",
-  },
-  {
-    service_id: "2",
-    url: "https://i.imgur.com/zsnEIYE.jpg",
-  },
-  {
-    service_id: "1",
-    url: "https://i.imgur.com/opayjjc.jpg",
-  },
-  {
-    service_id: "1",
-    url: "https://i.imgur.com/6YwsJXi.jpg",
-  },
-  {
-    service_id: "2",
-    url: "https://i.imgur.com/ePSDFFe.jpg",
-  },
-  {
-    service_id: "2",
-    url: "https://i.imgur.com/zsnEIYE.jpg",
+    image: demolition,
+    title: "Demolition and Fire Damage",
+    header: "Clearing and Restoring After the Unthinkable",
+    body: "Our comprehensive services cover both demolition and fire damage restoration. We handle everything from safe and efficient demolition for your site's next chapter to smoke and soot removal and structural repairs, helping you move forward after a fire.",
+    slogan: "From Demolition to Restoration, We've Got You Covered",
   },
 ];
 
@@ -171,5 +121,451 @@ export const reviews = [
     name: "Michael J.",
     source: "Craig's List",
     review: "He got rid of my rat problem.",
+  },
+];
+
+export const IMAGES = [
+  {
+    service_id: "1",
+    service: "Dryrot Repair",
+    url: "https://i.imgur.com/dcsz3jx.jpg",
+  },
+  {
+    service_id: "1",
+    service: "Dryrot Repair",
+    url: "https://i.imgur.com/yn8AA3H.jpg",
+  },
+  {
+    service_id: "1",
+    service: "Dryrot Repair",
+    url: "https://i.imgur.com/WaResCc.jpg",
+  },
+  {
+    service_id: "1",
+    service: "Dryrot Repair",
+    url: "https://i.imgur.com/ZiQi0z5.jpg",
+  },
+  {
+    service_id: "1",
+    service: "Dryrot Repair",
+    url: "https://i.imgur.com/h8AgzPw.jpg",
+  },
+  {
+    service_id: "1",
+    service: "Dryrot Repair",
+    url: "https://i.imgur.com/YNeIQ8l.jpg",
+  },
+  {
+    service_id: "1",
+    service: "Dryrot Repair",
+    url: "https://i.imgur.com/tiBAbUP.jpg",
+  },
+  {
+    service_id: "1",
+    service: "Dryrot Repair",
+    url: "https://i.imgur.com/MsvTBZ4.jpg",
+  },
+  {
+    service_id: "1",
+    service: "Dryrot Repair",
+    url: "https://i.imgur.com/ckbnW9l.jpg",
+  },
+  {
+    service_id: "1",
+    service: "Dryrot Repair",
+    url: "https://i.imgur.com/xzgA5cv.jpg",
+  },
+  {
+    service_id: "1",
+    service: "Dryrot Repair",
+    url: "https://i.imgur.com/Tb4pcRV.jpg",
+  },
+  {
+    service_id: "1",
+    service: "Dryrot Repair",
+    url: "https://i.imgur.com/EEs67cy.jpg",
+  },
+  {
+    service_id: "1",
+    service: "Dryrot Repair",
+    url: "https://i.imgur.com/bftSN1x.jpg",
+  },
+  {
+    service_id: "1",
+    service: "Dryrot Repair",
+    url: "https://i.imgur.com/xev3aAy.jpg",
+  },
+  {
+    service_id: "1",
+    service: "Dryrot Repair",
+    url: "https://i.imgur.com/0EOYC7T.jpg",
+  },
+  {
+    service_id: "1",
+    service: "Dryrot Repair",
+    url: "https://i.imgur.com/EpCPU0q.jpg",
+  },
+
+  {
+    service_id: "1",
+    service: "Dryrot Repair",
+    url: "https://i.imgur.com/HTqc6mx.jpg",
+  },
+  {
+    service_id: "1",
+    service: "Dryrot Repair",
+    url: "https://i.imgur.com/ZqgiGW4.jpg",
+  },
+  {
+    service_id: "1",
+    service: "Dryrot Repair",
+    url: "https://i.imgur.com/30YmpwI.jpg",
+  },
+  {
+    service_id: "1",
+    service: "Dryrot Repair",
+    url: "https://i.imgur.com/0HVrjkq.jpg",
+  },
+  {
+    service_id: "1",
+    service: "Dryrot Repair",
+    url: "https://i.imgur.com/FyAjeTE.jpg",
+  },
+  {
+    service_id: "1",
+    service: "Dryrot Repair",
+    url: "https://i.imgur.com/tkOhx2f.jpg",
+  },
+  {
+    service_id: "1",
+    service: "Dryrot Repair",
+    url: "https://i.imgur.com/I7JPOh4.jpg",
+  },
+  {
+    service_id: "1",
+    service: "Dryrot Repair",
+    url: "https://i.imgur.com/VuByMOj.jpg",
+  },
+  {
+    service_id: "1",
+    service: "Dryrot Repair",
+    url: "https://i.imgur.com/7fXM7Vq.jpg",
+  },
+  {
+    service_id: "1",
+    service: "Dryrot Repair",
+    url: "https://i.imgur.com/bLj24ki.jpg",
+  },
+  {
+    service_id: "1",
+    service: "Dryrot Repair",
+    url: "https://i.imgur.com/yn8AA3H.jpg",
+  },
+  {
+    service_id: "1",
+    service: "Dryrot Repair",
+    url: "https://i.imgur.com/6MdRfFK.jpg",
+  },
+  {
+    service_id: "2",
+    service: "Window Replacement",
+    url: "https://i.imgur.com/LeMnwbt.jpg",
+  },
+  {
+    service_id: "2",
+    service: "Window Replacement",
+    url: "https://i.imgur.com/L1por55.jpg",
+  },
+  {
+    service_id: "2",
+    service: "Window Replacement",
+    url: "https://i.imgur.com/GlcPeg4.jpg",
+  },
+  {
+    service_id: "2",
+    service: "Window Replacement",
+    url: "https://i.imgur.com/DKsZ4m2.jpg",
+  },
+  {
+    service_id: "2",
+    service: "Window Replacement",
+    url: "https://i.imgur.com/OJIxZbr.jpg",
+  },
+  {
+    service_id: "2",
+    service: "Window Replacement",
+    url: "https://i.imgur.com/FoCzIpV.jpg",
+  },
+  {
+    service_id: "2",
+    service: "Window Replacement",
+    url: "https://i.imgur.com/zODQRLP.jpg",
+  },
+  {
+    service_id: "2",
+    service: "Window Replacement",
+    url: "https://i.imgur.com/gKCz1Y2.jpg",
+  },
+  {
+    service_id: "2",
+    service: "Window Replacement",
+    url: "https://i.imgur.com/bKbPGZD.jpg",
+  },
+  {
+    service_id: "2",
+    service: "Window Replacement",
+    url: "https://i.imgur.com/LNXUoz1.jpg",
+  },
+  {
+    service_id: "2",
+    service: "Window Replacement",
+    url: "https://i.imgur.com/TfuCDxM.jpg",
+  },
+  {
+    service_id: "2",
+    service: "Window Replacement",
+    url: "https://i.imgur.com/W9fmlUv.jpg",
+  },
+  {
+    service_id: "3",
+    service: "Framing",
+    url: "https://i.imgur.com/89cl8KZ.jpg",
+  },
+  {
+    service_id: "3",
+    service: "Framing",
+    url: "https://i.imgur.com/qjBudkm.jpg",
+  },
+  {
+    service_id: "3",
+    service: "Framing",
+    url: "https://i.imgur.com/JCAwbx3.jpg",
+  },
+  {
+    service_id: "3",
+    service: "Framing",
+    url: "https://i.imgur.com/cq3v7FM.jpg",
+  },
+  {
+    service_id: "3",
+    service: "Framing",
+    url: "https://i.imgur.com/06jt1dk.jpg",
+  },
+  {
+    service_id: "3",
+    service: "Framing",
+    url: "https://i.imgur.com/qweZs53.jpg",
+  },
+  {
+    service_id: "3",
+    service: "Framing",
+    url: "https://i.imgur.com/Ltjksud.jpg",
+  },
+  {
+    service_id: "3",
+    service: "Framing",
+    url: "https://i.imgur.com/YWRSNWQ.jpg",
+  },
+  {
+    service_id: "3",
+    service: "Framing",
+    url: "https://i.imgur.com/h7ef2Gr.jpg",
+  },
+  {
+    service_id: "3",
+    service: "Framing",
+    url: "https://i.imgur.com/QiOC0Cr.jpg",
+  },
+  {
+    service_id: "3",
+    service: "Framing",
+    url: "https://i.imgur.com/eeQ72T4.jpg",
+  },
+  {
+    service_id: "3",
+    service: "Framing",
+    url: "https://i.imgur.com/5gdyL3o.jpg",
+  },
+  {
+    service_id: "3",
+    service: "Framing",
+    url: "https://i.imgur.com/ddpCjEd.jpg",
+  },
+  {
+    service_id: "3",
+    service: "Framing",
+    url: "https://i.imgur.com/R6UF0cq.jpg",
+  },
+  {
+    service_id: "3",
+    service: "Framing",
+    url: "https://i.imgur.com/Thc2lgB.jpg",
+  },
+  {
+    service_id: "3",
+    service: "Framing",
+    url: "https://i.imgur.com/6RumDpn.jpg",
+  },
+  {
+    service_id: "4",
+    service: "Remodel",
+    url: "https://i.imgur.com/31oLB2b.jpg",
+  },
+  {
+    service_id: "4",
+    service: "Remodel",
+    url: "https://i.imgur.com/TV5FWkv.jpg",
+  },
+  {
+    service_id: "4",
+    service: "Remodel",
+    url: "https://i.imgur.com/unaj5bG.jpg",
+  },
+  {
+    service_id: "4",
+    service: "Remodel",
+    url: "https://i.imgur.com/dkSvELr.jpg",
+  },
+  {
+    service_id: "4",
+    service: "Remodel",
+    url: "https://i.imgur.com/vpL9MpP.jpg",
+  },
+  {
+    service_id: "4",
+    service: "Remodel",
+    url: "https://i.imgur.com/RotyDo1.jpg",
+  },
+  {
+    service_id: "4",
+    service: "Remodel",
+    url: "https://i.imgur.com/saTYHL2.jpg",
+  },
+  {
+    service_id: "4",
+    service: "Remodel",
+    url: "https://i.imgur.com/tkmsBjw.jpg",
+  },
+  {
+    service_id: "4",
+    service: "Remodel",
+    url: "https://i.imgur.com/SVqRVrX.jpg",
+  },
+  {
+    service_id: "4",
+    service: "Remodel",
+    url: "https://i.imgur.com/kgGftje.jpg",
+  },
+  {
+    service_id: "4",
+    service: "Remodel",
+    url: "https://i.imgur.com/gFeAaor.jpg",
+  },
+
+  {
+    service_id: "4",
+    service: "Remodel",
+    url: "https://i.imgur.com/kOqTIX1.jpg",
+  },
+  {
+    service_id: "4",
+    service: "Remodel",
+    url: "https://i.imgur.com/FOatmfN.jpg",
+  },
+  {
+    service_id: "4",
+    service: "Remodel",
+    url: "https://i.imgur.com/fdiAhlF.jpg",
+  },
+
+  {
+    service_id: "4",
+    service: "Remodel",
+    url: "https://i.imgur.com/Md9JJMu.jpg",
+  },
+  {
+    service_id: "4",
+    service: "Remodel",
+    url: "https://i.imgur.com/qhj4dhB.jpg",
+  },
+  {
+    service_id: "5",
+    service: "Drywall",
+    url: "https://i.imgur.com/dD0PnU9.jpg",
+  },
+  {
+    service_id: "5",
+    service: "Drywall",
+    url: "https://i.imgur.com/lYV8JDa.jpg",
+  },
+  {
+    service_id: "5",
+    service: "Drywall",
+    url: "https://i.imgur.com/dR4LYMD.jpg",
+  },
+  {
+    service_id: "5",
+    service: "Drywall",
+    url: "https://i.imgur.com/9tp2v32.jpg",
+  },
+  {
+    service_id: "6",
+    service: "Siding",
+    url: "https://i.imgur.com/7H61XIm.jpg",
+  },
+  {
+    service_id: "6",
+    service: "Siding",
+    url: "https://i.imgur.com/55hnoUB.jpg",
+  },
+  {
+    service_id: "6",
+    service: "Siding",
+    url: "https://i.imgur.com/UY1EASP.jpg",
+  },
+  {
+    service_id: "6",
+    service: "Siding",
+    url: "https://i.imgur.com/O1IJXSv.jpg",
+  },
+  {
+    service_id: "8",
+    service: "Patio Covers",
+    url: "https://i.imgur.com/k5M60FE.jpg",
+  },
+  {
+    service_id: "8",
+    service: "Patio Covers",
+    url: "https://i.imgur.com/PmY3AvA.jpg",
+  },
+  {
+    service_id: "8",
+    service: "Patio Covers",
+    url: "https://i.imgur.com/Fs6kIKK.jpg",
+  },
+  {
+    service_id: "8",
+    service: "Patio Covers",
+    url: "https://i.imgur.com/dka55Zm.jpg",
+  },
+  {
+    service_id: "9",
+    service: "Demolition & Fire Damage",
+    url: "https://i.imgur.com/yO6ee74.jpg",
+  },
+  {
+    service_id: "9",
+    service: "Demolition & Fire Damage",
+    url: "https://i.imgur.com/DH1xjtw.jpg",
+  },
+  {
+    service_id: "9",
+    service: "Demolition & Fire Damage",
+    url: "https://i.imgur.com/xz1SZXU.jpg",
+  },
+  {
+    service_id: "9",
+    service: "Demolition & Fire Damage",
+    url: "https://i.imgur.com/cfUp5mB.jpg",
   },
 ];

@@ -11,6 +11,8 @@ import framing from "./services/Framing.jpg";
 import remodeling from "./services/Remodeling.jpg";
 import flooring from "./services/Flooring.jpg";
 import drywall from "./services/Drywall.jpg";
+import demolition from "./services/Demolition.jpg";
+import painting from "./services/Painting.jpg";
 
 import about from "./heros/About-Hero.jpg";
 import contact from "./heros/Contact-Hero.jpg";
@@ -31,6 +33,8 @@ export {
   remodeling,
   flooring,
   drywall,
+  demolition,
+  painting,
   about,
   contact,
   gallery,

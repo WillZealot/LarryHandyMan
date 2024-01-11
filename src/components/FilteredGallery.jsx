@@ -18,7 +18,7 @@ function FilteredGallery() {
       mb="9"
       className=""
     >
-      <Box className="flex justify-start w-full">
+      <Box className="flex justify-start w-full animate-fadeInLeft">
         <div className=" text-black font-black md:text-[30px] sm:text-[25px] text-[22px] pb-6 md:pb-4 hover:text-slate-600 hover:underline">
           <Link to={`/gallery/${id}`}>View More Images</Link>
         </div>
@@ -26,7 +26,7 @@ function FilteredGallery() {
       <Gallery>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 sm:my-5">
           {filteredImages.slice(0, 4).map((image, index) => (
-            <div className="col-span-1 ">
+            <div className="col-span-1  animate-fadeInRight hover:cursor-pointer">
               <Item
                 key={index}
                 original={image.url}
