@@ -60,11 +60,51 @@ export const services = [
 export const IMAGES = [
   {
     service_id: "1",
-    url: "https://placekitten.com/1024/768?image=1",
+    url: "https://i.imgur.com/opayjjc.jpg",
   },
   {
     service_id: "1",
-    url: "https://drive.google.com/uc?export=view&id=1IiNN7_WSzCXpI2rtsABDmzAMfprnWebG",
+    url: "https://i.imgur.com/6YwsJXi.jpg",
+  },
+  {
+    service_id: "2",
+    url: "https://i.imgur.com/ePSDFFe.jpg",
+  },
+  {
+    service_id: "2",
+    url: "https://i.imgur.com/zsnEIYE.jpg",
+  },
+  {
+    service_id: "1",
+    url: "https://i.imgur.com/opayjjc.jpg",
+  },
+  {
+    service_id: "1",
+    url: "https://i.imgur.com/6YwsJXi.jpg",
+  },
+  {
+    service_id: "2",
+    url: "https://i.imgur.com/ePSDFFe.jpg",
+  },
+  {
+    service_id: "2",
+    url: "https://i.imgur.com/zsnEIYE.jpg",
+  },
+  {
+    service_id: "1",
+    url: "https://i.imgur.com/opayjjc.jpg",
+  },
+  {
+    service_id: "1",
+    url: "https://i.imgur.com/6YwsJXi.jpg",
+  },
+  {
+    service_id: "2",
+    url: "https://i.imgur.com/ePSDFFe.jpg",
+  },
+  {
+    service_id: "2",
+    url: "https://i.imgur.com/zsnEIYE.jpg",
   },
 ];
 
