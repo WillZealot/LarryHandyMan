@@ -67,3 +67,31 @@ export const IMAGES = [
     url: "https://drive.google.com/uc?export=view&id=1IiNN7_WSzCXpI2rtsABDmzAMfprnWebG",
   },
 ];
+
+export const reviews = [
+  {
+    name: "Nick S.",
+    source: "Angie's List",
+    review: "Absolutely Stellar job!"
+  },
+  {
+    name: "Josh V.",
+    source: "Facebook",
+    review: "He cleaned my gutters in 45 minutes! They're sparkling!"
+  },
+  {
+    name: "Adam P.",
+    source: "Google",
+    review: "Can't believe the difference in my patio after a good pressure wash. A++"
+  },
+  {
+    name: "Maria L.",
+    source: "Angies List",
+    review: "This guy can use some tools! I have a brand new deck and it only took one weekend!"
+  },
+  {
+    name: "Michael J.",
+    source: "Craig's List",
+    review: "He got rid of my rat problem."
+  }
+]
