@@ -15,6 +15,7 @@ module.exports = {
         "contact-hero": "url(/src/assets/heros/Contact-Hero.jpg)",
         "gallery-hero": "url(/src/assets/heros/Gallery-Hero.jpg)",
         "services-hero": "url(/src/assets/heros/Services-Hero.jpg)",
+        "service-hero": "url(/src/assets/heros/ServiceID-Hero.jpg)",
       },
       keyframes: {
         fadeInLeft: {
