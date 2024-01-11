@@ -43,7 +43,7 @@ const ServiceCards = () => {
               </Button>
               <Link to={`/gallery/${index + 1}`}>
                 <Button color="cyan" size="4" radius="full">
-                  Gallery <ImageIcon width="18" height="18" />
+                  Gallery <ImageIcon width="16" height="16" />
                 </Button>
               </Link>
             </Flex>
