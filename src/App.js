@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"; //JV: importing Browser Router to allow linking in header
 import Header from "./components/Header";
-import { Home, Contact, About, Gallery, Services, GalleryID } from "./pages";
+import { Home, Contact, About, Gallery, Services, GalleryID, ServicesID } from "./pages";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
@@ -16,6 +16,7 @@ function App() {
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/gallery/:id" element={<GalleryID />} />
           <Route path="/services" element={<Services />} />
+          <Route path="/services/:id" element={<ServicesID />} />
         </Routes>
       </div>
     </Router>

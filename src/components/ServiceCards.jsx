@@ -41,9 +41,9 @@ const ServiceCards = () => {
               <Button color="green" size="4" radius="full">
                 Request a Quote
               </Button>
-              <Link to={`/gallery/${index + 1}`}>
+              <Link to={`/services/${index + 1}`}>
                 <Button color="cyan" size="4" radius="full">
-                  Gallery <ImageIcon width="16" height="16" />
+                  Learn More <ImageIcon width="16" height="16" />
                 </Button>
               </Link>
             </Flex>
