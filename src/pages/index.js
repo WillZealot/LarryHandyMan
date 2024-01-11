@@ -4,5 +4,6 @@ import Gallery from "./Gallery";
 import GalleryID from "./GalleryID";
 import Home from "./Home";
 import Services from "./Services";
+import ServicesID from "./ServicesID";
 
-export { About, Contact, Gallery, GalleryID, Home, Services };
+export { About, Contact, Gallery, GalleryID, Home, Services, ServicesID };
