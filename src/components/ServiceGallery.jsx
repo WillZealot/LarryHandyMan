@@ -9,7 +9,7 @@ function ServiceGallery() {
   let { id } = useParams();
   const filteredImages = IMAGES.filter((image) => image.service_id === id);
   const filteredService = services.find((service) => service.service_id === id);
-  
+
   return (
     <Flex justify="center" align="center" py="4" direction="column">
       <div className=" text-black font-black md:text-[60px] sm:text-[50px] xs:text-[40px] text-[30px] text-center px-4 py-6 mt-4 bg-neutral-200 w-full my-8 animate-fadeInRight">
@@ -32,7 +32,7 @@ function ServiceGallery() {
                     onClick={open}
                     src={image.url}
                     alt=""
-                    className="w-96 h-96"
+                    className="w-96 h-96 shadow-xl "
                   />
                 )}
               </Item>

@@ -21,7 +21,7 @@ const ServiceCards = () => {
       my="3"
     >
       {services.map((service, index) => (
-        <Box key={index} className="md:col-span-3">
+        <Box key={index} className="md:col-span-3 shadow-xl">
           <Card>
             <Inset clip="padding-box" side="top" pb="current">
               <img

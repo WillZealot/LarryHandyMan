@@ -1,10 +1,10 @@
 import React from "react";
 import { Flex, Avatar, Button } from "@radix-ui/themes";
-import { tools, home } from "../assets";
+import { tools, home, alt } from "../assets";
 
 const MainPage = () => {
   const backgroundStyle = {
-    backgroundImage: `url(${home})`,
+    backgroundImage: `url(${alt})`,
     backgroundSize: "cover",
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
@@ -54,10 +54,10 @@ const MainPage = () => {
         </h1>
         {/* Add any other elements or images here */}
         <Flex p="5" justify="center" gap="4" className="flex-col md:flex-row">
-          <Button color="grass" size="4" radius="large" >
+          <Button color="blue" size="4" radius="large" highContrast>
             Call Now : (407) 371-7701
           </Button>
-          <Button color="crimson" size="4" radius="large" >
+          <Button color="gray" size="4" radius="large" >
             Get a Quote
           </Button>
         </Flex>

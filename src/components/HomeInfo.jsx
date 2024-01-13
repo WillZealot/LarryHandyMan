@@ -32,7 +32,7 @@ const HomeInfo = () => {
         </ul>
       </Flex>
       <Flex my="6" justify="center">
-        <Button color="red" size="4" radius="full" highContrast>
+        <Button color="gray" size="4" radius="full">
           <Link to="/services">More Services</Link>
         </Button>
       </Flex>
