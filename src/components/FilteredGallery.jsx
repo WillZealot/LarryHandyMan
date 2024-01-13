@@ -40,7 +40,7 @@ function FilteredGallery() {
                     onClick={open}
                     src={image.url}
                     alt=""
-                    className="w-96 h-96 rounded-2xl "
+                    className="w-96 h-96 rounded-2xl drop-shadow-2xl"
                   />
                 )}
               </Item>

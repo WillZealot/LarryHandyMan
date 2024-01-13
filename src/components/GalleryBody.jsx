@@ -30,8 +30,8 @@ function GalleryBody() {
                   <Item
                     original={image.url}
                     thumbnail={image.url}
-                    width="1024"
-                    height="768"
+                    width="724"
+                    height="780"
                   >
                     {({ ref, open }) => (
                       <img
@@ -39,7 +39,7 @@ function GalleryBody() {
                         onClick={open}
                         src={image.url}
                         alt=""
-                        className="w-96 h-96 rounded-sm"
+                        className="w-96 h-96 rounded-md shadow-xl"
                       />
                     )}
                   </Item>
