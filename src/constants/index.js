@@ -275,6 +275,7 @@ export const IMAGES = [
     service_id: "2",
     service: "Window Replacement",
     url: "https://i.imgur.com/L1por55.jpg",
+    role: "Maintenance Technician",
   },
   {
     service_id: "2",
@@ -295,6 +296,7 @@ export const IMAGES = [
     service_id: "2",
     service: "Window Replacement",
     url: "https://i.imgur.com/FoCzIpV.jpg",
+    role: "Plumbing Specialist",
   },
   {
     service_id: "2",
