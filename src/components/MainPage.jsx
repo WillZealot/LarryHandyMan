@@ -1,6 +1,7 @@
 import React from "react";
 import { Flex, Avatar, Button } from "@radix-ui/themes";
 import { tools, home, alt } from "../assets";
+import { Link } from "react-router-dom";
 
 const MainPage = () => {
   const backgroundStyle = {
@@ -55,11 +56,13 @@ const MainPage = () => {
         {/* Add any other elements or images here */}
         <Flex p="5" justify="center" gap="4" className="flex-col md:flex-row">
           <Button color="blue" size="4" radius="large" highContrast>
-            Call Now : (407) 371-7701
+            Call Now : (360) 356-6008
           </Button>
-          <Button color="gray" size="4" radius="large" >
-            Get a Quote
-          </Button>
+          <Link to="/contact">
+            <Button color="gray" size="4" radius="large">
+              Get a Quote
+            </Button>
+          </Link>
         </Flex>
       </div>
     </div>

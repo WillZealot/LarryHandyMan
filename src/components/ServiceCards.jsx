@@ -38,9 +38,11 @@ const ServiceCards = () => {
             </Inset>
             <Heading align="center">{service.title}</Heading>
             <Flex justify="center" gap="4" p="4">
+            <Link to={`/contact`}>
               <Button color="green" size="4" radius="full">
                 Request a Quote
               </Button>
+              </Link>
               <Link to={`/services/${index + 1}`}>
                 <Button color="cyan" size="4" radius="full">
                   Learn More <ImageIcon width="16" height="16" />
