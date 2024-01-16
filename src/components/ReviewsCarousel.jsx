@@ -8,36 +8,39 @@ const ReviewsCarousel = () => {
   const settings = {
     dots: true,
     infinite: true,
-    speed: 500,
-    slidesToShow: 2,
-    slidesToScroll: 1,
-    centerMode: false,
+    speed: 1500,
+    slidesToShow: 3,
+    centerMode: true,
+    centerPadding: "50px",
     prevArrow: <CustomPrevArrow />,
     nextArrow: <CustomNextArrow />,
+    responsive: [
+      {
+        breakpoint: 768, // This is the breakpoint for mobile devices
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   };
 
   return (
-    <div className="reviews-section" style={{ overflow: "hidden" }}>
-      <h2>Customer Reviews</h2>
+    <div className="overflow-hidden border-4 border-solid border-gray-600 rounded-xl">
+      <h2 className="text-white text-center text-2xl mt-3">Customer Reviews</h2>
       <Slider {...settings}>
         {reviews.map((review, index) => (
-          <div
-            className="review-card"
-            style={{
-              border: "1px solid #ccc",
-              borderRadius: "8px",
-              padding: "16px",
-              margin: "16px",
-              boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)",
-            }}
-          >
-            <h3 style={{ fontSize: "1.2rem", fontWeight: "bold" }}>
-              {review.name}
-            </h3>
-            <p style={{ color: "#666", fontStyle: "italic" }}>
-              {review.source}
-            </p>
-            <p style={{ marginTop: "8px" }}>{review.review}</p>
+          <div key={index} className="grid grid-cols-1 md:grid-cols-4">
+            <div
+              key={index}
+              className="bg-white border border-gray-900 rounded-lg p-4 m-4 shadow-xl"
+            >
+              <h3 className="text-slate-500 text-lg font-bold mb-2">
+                {review.name}
+              </h3>
+              <p className="text-gray-500 italic mb-2">{review.source}</p>
+              <p className="text-slate-500">{review.review}</p>
+            </div>
           </div>
         ))}
       </Slider>
@@ -46,12 +49,18 @@ const ReviewsCarousel = () => {
 };
 
 const CustomPrevArrow = (props) => (
-  <div onClick={props.onClick}>
+  <div
+    className="absolute top-1/2 transform -translate-y-1/2 left-4 cursor-pointer text-2xl text-gray-900 hover:text-gray-700 z-10"
+    onClick={props.onClick}
+  >
     <FontAwesomeIcon icon={faArrowLeft} />
   </div>
 );
 const CustomNextArrow = (props) => (
-  <div onClick={props.onClick}>
+  <div
+    className="absolute top-1/2 transform -translate-y-1/2 right-4 cursor-pointer text-2xl text-gray-900 hover:text-gray-700 z-10"
+    onClick={props.onClick}
+  >
     <FontAwesomeIcon icon={faArrowRight} />
   </div>
 );

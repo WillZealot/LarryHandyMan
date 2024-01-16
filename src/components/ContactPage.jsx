@@ -13,7 +13,8 @@ import ReviewsCarousel from "./ReviewsCarousel";
 const ContactPage = () => {
   return (
     <>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-9 mt-8">
+      <div className="grid grid-cols-1 md:grid-cols-6 gap-9 mt-8">
+        <div className="cols-1"></div>
         <Box
           className="col-span-2 pt-5 justify-center justify-self-center"
           style={{
@@ -41,7 +42,7 @@ const ContactPage = () => {
             outstanding results.
           </p>
 
-          <div className="flex-col mb-3 justify-items-center">
+          <div className="flex-col mb-3 mt-6">
             <div className="flex items-center mb-3">
               <FontAwesomeIcon icon={faPhone} className="mr-2" />
               <a href="tel:555-555-5555">555-555-5555</a>
@@ -60,7 +61,7 @@ const ContactPage = () => {
         </Box>
 
         <Box
-          className="col-span-1 pt-5 flex justify-center justify-self-center"
+          className="col-span-2 pt-5 flex justify-center justify-self-center"
           style={{
             flex: "1",
             width: "80%",
@@ -72,122 +73,128 @@ const ContactPage = () => {
         >
           <Form.Root>
             <h1
-              style={{
-                fontSize: "2rem",
-                marginBottom: "20px",
-                textAlign: "center",
-                color: "#333",
-              }}
+              className="text-2xl mb-4 text-center text-gray-700"
             >
               Let's Get Started!
             </h1>
 
-            <Form.Field name="name" className="form-field">
-              <>
-                <Form.Control asChild>
-                  <input
-                    type="text"
-                    placeholder="Name"
-                    required
-                    className="form-input"
-                  />
-                </Form.Control>
-              </>
-            </Form.Field>
+            <div className="md:grid grid-cols-2">
+              <Form.Field name="name" className="form-field flex justify-center">
+                <>
+                  <Form.Control asChild>
+                    <input
+                      type="text"
+                      placeholder="Name"
+                      required
+                      className="form-input"
+                    />
+                  </Form.Control>
+                </>
+              </Form.Field>
 
-            <Form.Field name="number" className="form-field">
-              <>
-                <Form.Control asChild>
-                  <input
-                    type="text"
-                    placeholder="Phone Number"
-                    required
-                    className="form-input"
-                  />
-                </Form.Control>
-              </>
-            </Form.Field>
-
-            <Form.Field name="email" className="form-field">
-              <>
-                <Form.Control asChild>
-                  <input
-                    type="email"
-                    placeholder="Email"
-                    required
-                    className="form-input"
-                  />
-                </Form.Control>
-              </>
-            </Form.Field>
-
-            <Form.Field name="address" className="form-field">
-              <>
-                <Form.Control asChild>
-                  <input
-                    type="text"
-                    placeholder="Street Address"
-                    required
-                    className="form-input"
-                  />
-                </Form.Control>
-              </>
-            </Form.Field>
-
-            <Form.Field name="city" className="form-field">
-              <>
-                <Form.Control asChild>
-                  <input
-                    type="text"
-                    placeholder="City"
-                    required
-                    className="form-input"
-                  />
-                </Form.Control>
-              </>
-            </Form.Field>
-
-            <Form.Field name="zip" className="form-field">
-              <>
-                <Form.Control asChild>
-                  <input
-                    type="text"
-                    placeholder="Zip Code"
-                    required
-                    className="form-input"
-                  />
-                </Form.Control>
-              </>
-            </Form.Field>
-
-            <div className="pb-5">
-              <ServicesMenu />
+              <Form.Field name="number" className="form-field flex justify-center">
+                <>
+                  <Form.Control asChild>
+                    <input
+                      type="text"
+                      placeholder="Phone Number"
+                      required
+                      className="form-input"
+                    />
+                  </Form.Control>
+                </>
+              </Form.Field>
             </div>
 
-            <Form.Field name="message" className="form-field">
+            <div className="md:grid grid-cols-2">
+              <Form.Field name="email" className="form-field flex justify-center">
+                <>
+                  <Form.Control asChild>
+                    <input
+                      type="email"
+                      placeholder="Email"
+                      required
+                      className="form-input"
+                    />
+                  </Form.Control>
+                </>
+              </Form.Field>
+
+              <Form.Field name="address" className="form-field flex justify-center">
+                <>
+                  <Form.Control asChild>
+                    <input
+                      type="text"
+                      placeholder="Street Address"
+                      required
+                      className="form-input"
+                    />
+                  </Form.Control>
+                </>
+              </Form.Field>
+            </div>
+
+            <div className="md:grid grid-cols-2">
+              <Form.Field name="city" className="form-field flex justify-center">
+                <>
+                  <Form.Control asChild>
+                    <input
+                      type="text"
+                      placeholder="City"
+                      required
+                      className="form-input"
+                    />
+                  </Form.Control>
+                </>
+              </Form.Field>
+
+              <Form.Field name="state" className="form-field flex justify-center">
+                <>
+                  <Form.Control asChild>
+                    <input
+                      type="text"
+                      placeholder="State"
+                      required
+                      className="form-input"
+                    />
+                  </Form.Control>
+                </>
+              </Form.Field>
+            </div>
+
+            <div className="md:grid grid-cols-2">
+              <Form.Field name="zip" className="form-field flex justify-center">
+                <>
+                  <Form.Control asChild>
+                    <input
+                      type="text"
+                      placeholder="Zip Code"
+                      required
+                      className="form-input"
+                    />
+                  </Form.Control>
+                </>
+              </Form.Field>
+
+              <div className="rounded-md h-9 pl-3 w-85 flex justify-center">
+                <ServicesMenu/>
+              </div>
+            </div>
+
+            <Form.Field name="message" className="form-field flex justify-center mt-6 md:mt-1">
               <>
                 <Form.Control asChild>
                   <textarea
                     placeholder="Message"
                     required
-                    className="form-input"
+                    className="message-input"
                   />
                 </Form.Control>
               </>
             </Form.Field>
 
             <Form.Submit asChild>
-              <button
-                style={{
-                  backgroundColor: "#4CAF50",
-                  color: "#fff",
-                  padding: "10px 20px",
-                  border: "none",
-                  borderRadius: "5px",
-                  cursor: "pointer",
-                  fontSize: "1rem",
-                }}
-              >
+              <button className="bg-slate-500 text-white py-2 px-4 rounded-md cursor-pointer text-base hover:bg-slate-700">
                 GET IN TOUCH
               </button>
             </Form.Submit>
@@ -195,12 +202,16 @@ const ContactPage = () => {
         </Box>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-5 gap-9 mt-8 pt-8 pb-10">
-        <Box className="col-span-2 flex flex-col items-center border border-solid border-gray-300 p-4">
-          <h4>TESTIMONIALS</h4>
-          <h1>Hear what our customers have to say</h1>
+      <div className="bg-slate-500 grid grid-cols-1 md:grid-cols-8 gap-9 mt-8 pt-8 pb-10 items-center">
+        <div className="col-span-1"></div>
+        <Box className="col-span-2 mx-auto md:w-1/2 md:h-1/2 flex flex-col justify-center p-4 rounded-full">
+          <h4 className="text-white text-sm items-start pb-3">TESTIMONIALS</h4>
+          <h1 className="text-white text-3xl">
+            Don't believe it? Take a look at our {" "}
+            <span className="text-amber-300">5-Star</span> reviews
+          </h1>
         </Box>
-        <Box className="col-span-3">
+        <Box className="col-span-5 w-4/5 justify-center mx-auto">
           <ReviewsCarousel />
         </Box>
       </div>
