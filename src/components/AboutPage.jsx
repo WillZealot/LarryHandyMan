@@ -2,7 +2,7 @@ import React from "react";
 import homeImage from "../assets/img/homeImage.jpg";
 import { IMAGES } from "../constants";
 import logo from "../assets/img/chrisroof.png";
-import { Link } from "react-router-dom";;
+import { Link } from "react-router-dom";
 
 const photosIndex = [29, 33, 29];
 const AboutPage = () => {
@@ -14,15 +14,19 @@ const AboutPage = () => {
         </h2>
         <p className="pl-2 pr-2 md:flex justify pt-6 pb-12 leading-relaxed">
           Welcome to LGC – Your Trusted Partner in Home Solutions! I'm Larry,
-          the face behind the tools. With a passion for craftsmanship and a
-          commitment to excellence, LGC is here to transform your house into a
-          home. With years of experience in fixing, building, and renovating, I
-          take pride in delivering top-notch handyman services tailored to your
-          needs. From small repairs to major renovations, trust LGC for quality
-          workmanship and a friendly touch. Let's turn your vision into reality
-          – where every nail, every paint stroke, and every detail speaks of
-          care and dedication. Your satisfaction is our priority at LGC – Your
-          Home, Our Craft.
+          the skilled craftsman behind the tools, dedicated to transforming
+          houses into homes. With years of experience in fixing, building, and
+          renovating, LGC, your local general contractors serving the entire
+          Washington area, including Vancouver, Battleground, Camas, and
+          Ridgefield, take pride in delivering top-notch handyman services
+          tailored to your needs. From small repairs to major renovations, our
+          motivated team prioritizes quality work, customer satisfaction, and
+          flexibility to meet your custom needs. Easy communication is at the
+          heart of our business, ensuring a seamless collaboration as we turn
+          your vision into reality. Trust LGC for quality workmanship, a
+          friendly touch, and a commitment to excellence – where every nail,
+          every paint stroke, and every detail speaks of care and dedication.
+          Your satisfaction is our priority at LGC – Your Home, Our Craft.
         </p>
         <aside className="p-2 shadow-xl shadow-slate-400 rounded-lg md:p-0">
           <img
@@ -67,11 +71,15 @@ const AboutPage = () => {
           </section>
         </div>
       </section> */}
-      
+
       <section className="bg-gray-300 pt-7 pb-10">
         <div className="md:grid grid-cols-5">
           <div></div>
-          <img src={logo} alt="Our logo" className="h-36 justify-self-center hidden md:block" />
+          <img
+            src={logo}
+            alt="Our logo"
+            className="h-36 justify-self-center hidden md:block"
+          />
           <div className="md:col-span-2 text-center">
             <h2 className="text-2xl pb-3">Get to know our team!</h2>
             <p className="pb-5">
@@ -80,7 +88,12 @@ const AboutPage = () => {
               it's a simple task or something more complicated, our team is here
               to assist you with a smile!
             </p>
-            <Link to="/contact" className="text-white border rounded-3xl p-1 pr-3 pl-3 bg-slate-500">Get a quote today!</Link>
+            <Link
+              to="/contact"
+              className="text-white border rounded-3xl p-1 pr-3 pl-3 bg-slate-500"
+            >
+              Get a quote today!
+            </Link>
           </div>
         </div>
       </section>
