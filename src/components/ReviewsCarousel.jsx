@@ -9,35 +9,32 @@ const ReviewsCarousel = () => {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 2,
-    slidesToScroll: 1,
+    slidesToShow: 3,
     centerMode: false,
     prevArrow: <CustomPrevArrow />,
     nextArrow: <CustomNextArrow />,
+    responsive: [
+      {
+        breakpoint: 768, // This is the breakpoint for mobile devices
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   };
 
   return (
-    <div className="reviews-section" style={{ overflow: "hidden" }}>
-      <h2>Customer Reviews</h2>
+    <div className="overflow-hidden">
+      <h2 className="text-white text-center text-2xl">Customer Reviews</h2>
       <Slider {...settings}>
         {reviews.map((review, index) => (
-          <div
-            className="review-card"
-            style={{
-              border: "1px solid #ccc",
-              borderRadius: "8px",
-              padding: "16px",
-              margin: "16px",
-              boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)",
-            }}
-          >
-            <h3 style={{ fontSize: "1.2rem", fontWeight: "bold" }}>
-              {review.name}
-            </h3>
-            <p style={{ color: "#666", fontStyle: "italic" }}>
-              {review.source}
-            </p>
-            <p style={{ marginTop: "8px" }}>{review.review}</p>
+          <div key={index} className="grid grid-cols-1 md:grid-cols-4">
+            <div key={index} className="bg-white border border-gray-900 rounded-lg p-4 m-4 shadow-md">
+              <h3 className="text-slate-500 text-lg font-bold">{review.name}</h3>
+              <p className="text-gray-500 italic">{review.source}</p>
+              <p className="mt-2 text-slate-500">{review.review}</p>
+            </div>
           </div>
         ))}
       </Slider>
