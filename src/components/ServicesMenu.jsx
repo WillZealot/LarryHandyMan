@@ -1,12 +1,16 @@
-import React from 'react';
-import * as Select from '@radix-ui/react-select';
-import classnames from 'classnames';
-import { CheckIcon, ChevronDownIcon, ChevronUpIcon } from '@radix-ui/react-icons';
+import React from "react";
+import * as Select from "@radix-ui/react-select";
+import classnames from "classnames";
+import {
+  CheckIcon,
+  ChevronDownIcon,
+  ChevronUpIcon,
+} from "@radix-ui/react-icons";
 
 const ServicesMenu = () => (
   <Select.Root>
     <Select.Trigger
-      className="inline-flex items-center justify-center rounded px-[15px] text-[13px] leading-none h-[35px] gap-[5px] bg-white text-violet11 shadow-[0_2px_10px] shadow-black/10 hover:bg-mauve3 focus:shadow-[0_0_0_2px] focus:shadow-black data-[placeholder]:text-violet9 outline-none"
+      className="inline-flex items-center justify-center rounded px-[15px] text-[13px] leading-none h-[35px] gap-[5px] bg-gray-200 text-violet11 shadow-[0_2px_10px] shadow-black/10 hover:bg-slate-500 hover:text-white focus:shadow-[0_0_0_2px] focus:shadow-black data-[placeholder]:text-violet9 outline-none"
       aria-label="Food"
     >
       <Select.Value placeholder="Select a service.." />
@@ -31,9 +35,6 @@ const ServicesMenu = () => (
             <SelectItem value="patiocovers">Patio Covers</SelectItem>
             <SelectItem value="flooring">Flooring</SelectItem>
           </Select.Group>
-
-
-         
         </Select.Viewport>
         <Select.ScrollDownButton className="flex items-center justify-center h-[25px] bg-white text-violet11 cursor-default">
           <ChevronDownIcon />
@@ -43,22 +44,24 @@ const ServicesMenu = () => (
   </Select.Root>
 );
 
-const SelectItem = React.forwardRef(({ children, className, ...props }, forwardedRef) => {
-  return (
-    <Select.Item
-      className={classnames(
-        'text-[13px] leading-none text-violet11 rounded-[3px] flex items-center h-[25px] pr-[35px] pl-[25px] relative select-none data-[disabled]:text-mauve8 data-[disabled]:pointer-events-none data-[highlighted]:outline-none data-[highlighted]:bg-violet9 data-[highlighted]:text-violet1',
-        className
-      )}
-      {...props}
-      ref={forwardedRef}
-    >
-      <Select.ItemText>{children}</Select.ItemText>
-      <Select.ItemIndicator className="absolute left-0 w-[25px] inline-flex items-center justify-center">
-        <CheckIcon />
-      </Select.ItemIndicator>
-    </Select.Item>
-  );
-});
+const SelectItem = React.forwardRef(
+  ({ children, className, ...props }, forwardedRef) => {
+    return (
+      <Select.Item
+        className={classnames(
+          "text-[13px] leading-none text-violet11 rounded-[3px] flex items-center h-[25px] pr-[35px] pl-[25px] relative select-none data-[disabled]:text-mauve8 data-[disabled]:pointer-events-none data-[highlighted]:outline-none data-[highlighted]:bg-violet9 data-[highlighted]:text-violet1",
+          className
+        )}
+        {...props}
+        ref={forwardedRef}
+      >
+        <Select.ItemText>{children}</Select.ItemText>
+        <Select.ItemIndicator className="absolute left-0 w-[25px] inline-flex items-center justify-center">
+          <CheckIcon />
+        </Select.ItemIndicator>
+      </Select.Item>
+    );
+  }
+);
 
 export default ServicesMenu;

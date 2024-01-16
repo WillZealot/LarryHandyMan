@@ -120,7 +120,7 @@ export const reviews = [
   {
     name: "Michael J.",
     source: "Craig's List",
-    review: "He got rid of my rat problem.",
+    review: "New hurricane windows put up in just one afternon. Huge thanks!",
   },
 ];
 
