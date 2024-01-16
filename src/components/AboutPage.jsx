@@ -38,7 +38,7 @@ const AboutPage = () => {
         </aside>
       </section>
 
-      <section className="bg-slate-500">
+      {/* <section className="bg-slate-500">
         <div className="pl-2 pr-2 md: w-3/4 mx-auto pb-10">
           <h1 className="text-white pt-10 pb-10 text-6xl flex-col text-center">
             Meet our crew
@@ -66,7 +66,8 @@ const AboutPage = () => {
             })}
           </section>
         </div>
-      </section>
+      </section> */}
+      
       <section className="bg-gray-300 pt-7 pb-10">
         <div className="md:grid grid-cols-5">
           <div></div>

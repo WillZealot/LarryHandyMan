@@ -45,7 +45,7 @@ const ContactPage = () => {
           <div className="flex-col mb-3 mt-6">
             <div className="flex items-center mb-3">
               <FontAwesomeIcon icon={faPhone} className="mr-2" />
-              <a href="tel:555-555-5555">555-555-5555</a>
+              <a href="tel:360-356-6008">(360) 356-6008</a>
             </div>
 
             <div className="flex items-center mb-3">
@@ -202,13 +202,13 @@ const ContactPage = () => {
         </Box>
       </div>
 
-      <div className="bg-slate-500 grid grid-cols-1 md:grid-cols-8 gap-9 mt-8 pt-8 pb-10 items-center">
+      <div className="bg-gray-300 grid grid-cols-1 md:grid-cols-8 gap-9 mt-8 pt-8 pb-10 items-center">
         <div className="col-span-1"></div>
         <Box className="col-span-2 mx-auto md:w-1/2 md:h-1/2 flex flex-col justify-center p-4 rounded-full">
-          <h4 className="text-white text-sm items-start pb-3">TESTIMONIALS</h4>
-          <h1 className="text-white text-3xl">
+          <h4 className="text-slate-600 text-sm items-start pb-3">TESTIMONIALS</h4>
+          <h1 className="text-slate-700 text-3xl">
             Don't believe it? Take a look at our {" "}
-            <span className="text-amber-300">5-Star</span> reviews
+            <span className="text-amber-500">5-Star</span> reviews
           </h1>
         </Box>
         <Box className="col-span-5 w-4/5 justify-center mx-auto">

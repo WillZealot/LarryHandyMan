@@ -27,7 +27,7 @@ const ReviewsCarousel = () => {
 
   return (
     <div className="overflow-hidden border-4 border-solid border-gray-600 rounded-xl">
-      <h2 className="text-white text-center text-2xl mt-3">Customer Reviews</h2>
+      <h2 className="text-slate-500 font-bold text-center text-2xl mt-3">Customer Reviews</h2>
       <Slider {...settings}>
         {reviews.map((review, index) => (
           <div key={index} className="grid grid-cols-1 md:grid-cols-4">

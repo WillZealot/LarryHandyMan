@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"; //JV: importing Browser Router to allow linking in header
 import Header from "./components/Header";
+import Footer from "./components/Footer";
 import {
   Home,
   Contact,
@@ -28,6 +29,7 @@ function App() {
           <Route path="/services" element={<Services />} />
           <Route path="/services/:id" element={<ServicesID />} />
         </Routes>
+        <Footer />
       </div>
     </Router>
   );

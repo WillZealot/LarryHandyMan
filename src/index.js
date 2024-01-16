@@ -11,5 +11,5 @@ root.render(
     <Theme> {/* JV: Adding the Radix Theme component */}
       <App />
     </Theme>
-  </React.StrictMode>
+  </React.StrictMode>,
 );
