@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import * as Select from "@radix-ui/react-select";
 import classnames from "classnames";
 import {
@@ -6,43 +6,49 @@ import {
   ChevronDownIcon,
   ChevronUpIcon,
 } from "@radix-ui/react-icons";
+import { ServiceContext } from "../utils/ServiceContext";
+import { services } from "../constants";
 
-const ServicesMenu = () => (
-  <Select.Root>
-    <Select.Trigger
-      className="inline-flex items-center justify-center rounded px-[15px] text-[13px] leading-none h-[35px] gap-[5px] bg-gray-200 text-violet11 shadow-[0_2px_10px] shadow-black/10 hover:bg-slate-500 hover:text-white focus:shadow-[0_0_0_2px] focus:shadow-black data-[placeholder]:text-violet9 outline-none"
-      aria-label="Food"
-    >
-      <Select.Value placeholder="Select a service.." />
-      <Select.Icon className="text-violet11">
-        <ChevronDownIcon />
-      </Select.Icon>
-    </Select.Trigger>
-    <Select.Portal>
-      <Select.Content className="overflow-hidden bg-white rounded-md shadow-[0px_10px_38px_-10px_rgba(22,_23,_24,_0.35),0px_10px_20px_-15px_rgba(22,_23,_24,_0.2)]">
-        <Select.ScrollUpButton className="flex items-center justify-center h-[25px] bg-white text-violet11 cursor-default">
-          <ChevronUpIcon />
-        </Select.ScrollUpButton>
-        <Select.Viewport className="p-[5px]">
-          <Select.Group>
-            <SelectItem value="dryrotrepairs">Dryrot Repair</SelectItem>
-            <SelectItem value="windowreplace">Window Replace</SelectItem>
-            <SelectItem value="framing">Framing</SelectItem>
-            <SelectItem value="remodeling">Remodeling</SelectItem>
-            <SelectItem value="drywall">Drywall Repair</SelectItem>
-            <SelectItem value="siding">Siding</SelectItem>
-            <SelectItem value="decks">Decks</SelectItem>
-            <SelectItem value="patiocovers">Patio Covers</SelectItem>
-            <SelectItem value="flooring">Flooring</SelectItem>
-          </Select.Group>
-        </Select.Viewport>
-        <Select.ScrollDownButton className="flex items-center justify-center h-[25px] bg-white text-violet11 cursor-default">
+const ServicesMenu = () => {
+  const { setSelectedService } = useContext(ServiceContext);
+
+  return (
+    <Select.Root onValueChange={setSelectedService}>
+      <Select.Trigger
+        className="inline-flex items-center justify-center rounded px-[15px] text-[13px] leading-none h-[35px] gap-[5px] bg-gray-200 text-violet11 shadow-[0_2px_10px] shadow-black/10 hover:bg-slate-500 hover:text-white focus:shadow-[0_0_0_2px] focus:shadow-black data-[placeholder]:text-violet9 outline-none"
+        aria-label="Food"
+      >
+        <Select.Value placeholder="Select a service.." />
+        <Select.Icon className="text-violet11">
           <ChevronDownIcon />
-        </Select.ScrollDownButton>
-      </Select.Content>
-    </Select.Portal>
-  </Select.Root>
-);
+        </Select.Icon>
+      </Select.Trigger>
+      <Select.Portal>
+        <Select.Content className="overflow-hidden bg-white rounded-md shadow-[0px_10px_38px_-10px_rgba(22,_23,_24,_0.35),0px_10px_20px_-15px_rgba(22,_23,_24,_0.2)]">
+          <Select.ScrollUpButton className="flex items-center justify-center h-[25px] bg-white text-violet11 cursor-default">
+            <ChevronUpIcon />
+          </Select.ScrollUpButton>
+          <Select.Viewport className="p-[5px]">
+            <Select.Group>
+              {services.map((service) => (
+                <SelectItem
+                  key={service.service_id}
+                  value={service.title}
+                  className="hover:bg-slate-300"
+                >
+                  {service.title}
+                </SelectItem>
+              ))}
+            </Select.Group>
+          </Select.Viewport>
+          <Select.ScrollDownButton className="flex items-center justify-center h-[25px] bg-white text-violet11 cursor-default">
+            <ChevronDownIcon />
+          </Select.ScrollDownButton>
+        </Select.Content>
+      </Select.Portal>
+    </Select.Root>
+  );
+};
 
 const SelectItem = React.forwardRef(
   ({ children, className, ...props }, forwardedRef) => {

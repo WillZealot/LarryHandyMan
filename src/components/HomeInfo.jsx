@@ -28,7 +28,6 @@ const HomeInfo = () => {
           <li>Fire Damage</li>
           <li>Painting</li>
           <li>Demolition</li>
-          <li>Electrical Wiring</li>
         </ul>
       </Flex>
       <Flex my="6" justify="center">
