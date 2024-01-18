@@ -10,9 +10,49 @@ import * as Form from "@radix-ui/react-form";
 import ServicesMenu from "./ServicesMenu";
 import ReviewsCarousel from "./ReviewsCarousel";
 
+import emailjs from "emailjs-com";
+import { useState } from "react";
+import { ServiceContext } from "../utils/ServiceContext";
+import DialogSheet from "./DialogSheet";
+
 const ContactPage = () => {
+  emailjs.init("vQQH70qDYKpC1O0tc");
+  const [selectedService, setSelectedService] = useState(null);
+  const [loading, setLoading] = useState(false);
+  const [dialogOpen, setDialogOpen] = useState(false);
+  const [dialogTitle, setDialogTitle] = useState("");
+  const [dialogDescription, setDialogDescription] = useState("");
+
+  function sendEmail(e) {
+    e.preventDefault();
+    setLoading(true);
+
+    emailjs
+      .sendForm(
+        "service_cqh32ue",
+        "template_mdoont9",
+        e.target,
+        "vQQH70qDYKpC1O0tc"
+      )
+      .then(
+        () => {
+          setLoading(false);
+          setDialogTitle("Your information has been sent");
+          setDialogDescription("We will be getting back to you soon.");
+          setDialogOpen(true);
+          e.target.reset();
+        },
+        (error) => {
+          setLoading(false);
+          console.error(error);
+          setDialogTitle("There was a problem sending your information");
+          setDialogDescription("We apologize for the inconvenience.");
+          setDialogOpen(true);
+        }
+      );
+  }
   return (
-    <>
+    <ServiceContext.Provider value={{ selectedService, setSelectedService }}>
       <div className="grid grid-cols-1 md:grid-cols-6 gap-9 mt-8">
         <div className="cols-1"></div>
         <Box
@@ -20,7 +60,7 @@ const ContactPage = () => {
           style={{
             flex: "2",
             padding: "20px",
-            width: "80%",
+            width: "85%",
             backgroundColor: "#f5f5f5",
             borderRadius: "10px",
             boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
@@ -64,22 +104,23 @@ const ContactPage = () => {
           className="col-span-2 pt-5 flex justify-center justify-self-center"
           style={{
             flex: "1",
-            width: "80%",
+            width: "85%",
             padding: "20px",
             backgroundColor: "#fff",
             borderRadius: "10px",
             boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
           }}
         >
-          <Form.Root>
-            <h1
-              className="text-2xl mb-4 text-center text-gray-700"
-            >
+          <Form.Root onSubmit={sendEmail}>
+            <h1 className="text-2xl mb-4 text-center text-gray-700">
               Let's Get Started!
             </h1>
 
             <div className="md:grid grid-cols-2">
-              <Form.Field name="name" className="form-field flex justify-center">
+              <Form.Field
+                name="name"
+                className="form-field flex justify-center"
+              >
                 <>
                   <Form.Control asChild>
                     <input
@@ -92,7 +133,10 @@ const ContactPage = () => {
                 </>
               </Form.Field>
 
-              <Form.Field name="number" className="form-field flex justify-center">
+              <Form.Field
+                name="number"
+                className="form-field flex justify-center"
+              >
                 <>
                   <Form.Control asChild>
                     <input
@@ -107,7 +151,22 @@ const ContactPage = () => {
             </div>
 
             <div className="md:grid grid-cols-2">
-              <Form.Field name="email" className="form-field flex justify-center">
+              <Form.Field
+                name="email"
+                className="form-field flex justify-center "
+              >
+                <Form.Message
+                  className="FormMessage text-sm"
+                  match="valueMissing"
+                >
+                  Please enter your email
+                </Form.Message>
+                <Form.Message
+                  className="FormMessage text-sm text-red-500"
+                  match="typeMismatch"
+                >
+                  Provide valid email
+                </Form.Message>
                 <>
                   <Form.Control asChild>
                     <input
@@ -120,7 +179,10 @@ const ContactPage = () => {
                 </>
               </Form.Field>
 
-              <Form.Field name="address" className="form-field flex justify-center">
+              <Form.Field
+                name="address"
+                className="form-field flex justify-center"
+              >
                 <>
                   <Form.Control asChild>
                     <input
@@ -135,7 +197,10 @@ const ContactPage = () => {
             </div>
 
             <div className="md:grid grid-cols-2">
-              <Form.Field name="city" className="form-field flex justify-center">
+              <Form.Field
+                name="city"
+                className="form-field flex justify-center"
+              >
                 <>
                   <Form.Control asChild>
                     <input
@@ -148,7 +213,10 @@ const ContactPage = () => {
                 </>
               </Form.Field>
 
-              <Form.Field name="state" className="form-field flex justify-center">
+              <Form.Field
+                name="state"
+                className="form-field flex justify-center"
+              >
                 <>
                   <Form.Control asChild>
                     <input
@@ -177,11 +245,15 @@ const ContactPage = () => {
               </Form.Field>
 
               <div className="rounded-md h-9 pl-3 w-85 flex justify-center">
-                <ServicesMenu/>
+                <ServicesMenu />
+                <input type="hidden" name="service" value={selectedService} />
               </div>
             </div>
 
-            <Form.Field name="message" className="form-field flex justify-center mt-6 md:mt-1">
+            <Form.Field
+              name="message"
+              className="form-field flex justify-center mt-6 md:mt-1"
+            >
               <>
                 <Form.Control asChild>
                   <textarea
@@ -195,7 +267,7 @@ const ContactPage = () => {
 
             <Form.Submit asChild>
               <button className="bg-slate-500 text-white py-2 px-4 rounded-md cursor-pointer text-base hover:bg-slate-700">
-                GET IN TOUCH
+                {loading ? "Sending..." : "GET IN TOUCH"}
               </button>
             </Form.Submit>
           </Form.Root>
@@ -205,9 +277,11 @@ const ContactPage = () => {
       <div className="bg-gray-300 grid grid-cols-1 md:grid-cols-8 gap-9 mt-8 pt-8 pb-10 items-center">
         <div className="col-span-1"></div>
         <Box className="col-span-2 mx-auto md:w-1/2 md:h-1/2 flex flex-col justify-center p-4 rounded-full">
-          <h4 className="text-slate-600 text-sm items-start pb-3">TESTIMONIALS</h4>
+          <h4 className="text-slate-600 text-sm items-start pb-3">
+            TESTIMONIALS
+          </h4>
           <h1 className="text-slate-700 text-3xl">
-            Don't believe it? Take a look at our {" "}
+            Don't believe it? Take a look at our{" "}
             <span className="text-amber-500">5-Star</span> reviews
           </h1>
         </Box>
@@ -215,7 +289,14 @@ const ContactPage = () => {
           <ReviewsCarousel />
         </Box>
       </div>
-    </>
+      {dialogOpen && (
+        <DialogSheet
+          title={dialogTitle}
+          description={dialogDescription}
+          onClose={() => setDialogOpen(false)}
+        />
+      )}
+    </ServiceContext.Provider>
   );
 };
 
