@@ -266,9 +266,11 @@ const ContactPage = () => {
             </Form.Field>
 
             <Form.Submit asChild>
-              <button className="bg-slate-500 text-white py-2 px-4 rounded-md cursor-pointer text-base hover:bg-slate-700">
-                {loading ? "Sending..." : "GET IN TOUCH"}
-              </button>
+              <div className="flex justify-center">
+                <button className="bg-slate-500 text-white py-2 px-4 rounded-md cursor-pointer text-base hover:bg-slate-700">
+                  {loading ? "Sending..." : "GET IN TOUCH"}
+                </button>
+              </div>
             </Form.Submit>
           </Form.Root>
         </Box>
