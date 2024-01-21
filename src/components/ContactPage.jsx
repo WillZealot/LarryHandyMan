@@ -1,14 +1,14 @@
-import React from "react";
-import { Grid, Box, Container } from "@radix-ui/themes";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faPhone,
-  faEnvelope,
   faCommentSms,
+  faEnvelope,
+  faPhone,
 } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import * as Form from "@radix-ui/react-form";
-import ServicesMenu from "./ServicesMenu";
+import { Box } from "@radix-ui/themes";
+import React from "react";
 import ReviewsCarousel from "./ReviewsCarousel";
+import ServicesMenu from "./ServicesMenu";
 
 import emailjs from "emailjs-com";
 import { useState } from "react";
@@ -90,12 +90,12 @@ const ContactPage = () => {
 
             <div className="flex items-center mb-3">
               <FontAwesomeIcon icon={faEnvelope} className="mr-2" />
-              <a href="mailto:example@email.com">example@email.com</a>
+              <a href="mailto:Larrysgencon@gmail.com">Larrysgencon@gmail.com</a>
             </div>
 
             <div className="flex items-center">
               <FontAwesomeIcon icon={faCommentSms} className="mr-2" />
-              <a href="sms:555-555-5555">Text us</a>
+              <a href="sms:360-356-6008">Text us</a>
             </div>
           </div>
         </Box>

@@ -1,10 +1,29 @@
 import { Button, Flex } from "@radix-ui/themes";
 import React from "react";
 import { Link } from "react-router-dom";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 const HomeInfo = () => {
+  const controls = useAnimation();
+  const { ref, inView } = useInView();
+
+  React.useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    }
+  }, [controls, inView]);
   return (
-    <>
+    <motion.div
+      ref={ref}
+      animate={controls}
+      initial="hidden"
+      transition={{ duration: 0.5 }}
+      variants={{
+        visible: { opacity: 1, y: 0 },
+        hidden: { opacity: 0, y: 100 },
+      }}
+    >
       <Flex justify="center" align="center" direction="column" gap="6" p="3">
         <h1
           className={`text-black text-5xl md:text-6xl text-center my-5 font-extrabold`}
@@ -30,12 +49,23 @@ const HomeInfo = () => {
           <li>Demolition</li>
         </ul>
       </Flex>
-      <Flex my="6" justify="center">
-        <Button color="gray" size="4" radius="full">
-          <Link to="/services">More Services</Link>
-        </Button>
-      </Flex>
-    </>
+      <motion.div
+        ref={ref}
+        animate={controls}
+        initial="hidden"
+        transition={{ duration: 0.5 }}
+        variants={{
+          visible: { opacity: 1, y: 0 },
+          hidden: { opacity: 0, y: 100 },
+        }}
+      >
+        <Flex my="6" justify="center">
+          <Button color="gray" size="4" radius="full">
+            <Link to="/services">More Services</Link>
+          </Button>
+        </Flex>
+      </motion.div>
+    </motion.div>
   );
 };
 

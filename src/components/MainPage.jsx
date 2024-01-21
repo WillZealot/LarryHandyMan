@@ -1,9 +1,11 @@
+import { Avatar, Button, Flex } from "@radix-ui/themes";
 import React from "react";
-import { Flex, Avatar, Button } from "@radix-ui/themes";
-import { tools, home, alt } from "../assets";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import { alt, tools } from "../assets";
 
 const MainPage = () => {
+  const navigate = useNavigate();
+
   const backgroundStyle = {
     backgroundImage: `url(${alt})`,
     backgroundSize: "cover",
@@ -13,12 +15,6 @@ const MainPage = () => {
     justifyContent: "center",
     alignItems: "center",
     height: "90vh", // 100% of the viewport height
-  };
-
-  const textStyle = {
-    color: "white",
-    textAlign: "center",
-    fontSize: "26px", // Adjusted font size to 26 pixels
   };
 
   const lineStyle = {
@@ -54,15 +50,31 @@ const MainPage = () => {
           Improvements, Upgrades, Or Repairs!
         </h1>
         {/* Add any other elements or images here */}
-        <Flex p="5" justify="center" gap="4" className="flex-col md:flex-row">
-          <Button color="blue" size="4" radius="large" highContrast>
+        <Flex
+          p="5"
+          justify="center"
+          gap="4"
+          className="flex-col md:flex-row animate-fadeInLeft"
+        >
+          <Button
+            color="blue"
+            size="4"
+            radius="large"
+            highContrast
+            onClick={() => (window.location.href = "tel:3603566008")}
+            className="hover:cursor-pointer"
+          >
             Call Now : (360) 356-6008
           </Button>
-          <Link to="/contact">
-            <Button color="gray" size="4" radius="large">
-              Get a Quote
-            </Button>
-          </Link>
+          <Button
+            color="gray"
+            size="4"
+            radius="large"
+            onClick={() => navigate("/contact")}
+            className="hover:cursor-pointer"
+          >
+            Get a Quote
+          </Button>
         </Flex>
       </div>
     </div>
