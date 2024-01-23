@@ -14,13 +14,13 @@ const MainPage = () => {
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    height: "90vh", // 100% of the viewport height
+    height: "90vh",
   };
 
   const lineStyle = {
     borderBottom: "2px solid white",
-    width: "50%", // Adjust the width of the line as needed
-    margin: "20px auto", // Adjust the margin as needed
+    width: "50%",
+    margin: "20px auto", 
     opacity: "80%",
   };
 
@@ -45,11 +45,10 @@ const MainPage = () => {
           Your Local General Contractor
         </h1>
         <div style={lineStyle}></div>
-        <h1 className="w-[85%] m-auto text-gray-200 text-center lg:text-[26px] sm:text-[22px] xs:text-[20px] text-[16px] lg:leading-[40px] lg:opacity-70 animate-fadeInLeft hidden md:flex">
+        <h1 className="w-[85%] m-auto justify-center text-gray-200 text-center lg:text-[26px] sm:text-[22px] xs:text-[20px] text-[16px] lg:leading-[40px] lg:opacity-70 animate-fadeInLeft hidden md:flex">
           Get In Touch With Your Local General Contractor For your Next Home
           Improvements, Upgrades, Or Repairs!
         </h1>
-        {/* Add any other elements or images here */}
         <Flex
           p="5"
           justify="center"

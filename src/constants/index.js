@@ -41,7 +41,7 @@ export const services = [
     image: framing,
     title: "Framing",
     header: "Building Your Dreams",
-    body: "Our skilled craftsmen provide top-notch framing services, laying a solid foundation for your construction project. We adhere to the highest standards of safety and precision.",
+    body: "Our skilled craftsmen provide top-notch framing services. We adhere to the highest standards of safety and precision.",
     slogan: "Crafting Structures, Framing Futures",
   },
   {
@@ -96,31 +96,30 @@ export const services = [
 
 export const reviews = [
   {
-    name: "Nick S.",
-    source: "Angie's List",
-    review: "Absolutely Stellar job!",
+    name: "William T.",
+    review: "If I could give more than 5 stars I would. I recommend him to all. Larry does the greatest job from the numerous handy men I have hired in the past. With Larry I don't need to keep looking for someone to do a spectacular job. Larry is just that guy.",
   },
   {
-    name: "Josh V.",
-    source: "Facebook",
-    review: "He cleaned my gutters in 45 minutes! They're sparkling!",
+    name: "Daniel Z.",
+    review: "I had Larry do a lot of work for me recently, I'm proud to say I don't regret paying what I paid, he took care of all of the dry rot I had in my subfloor then replaced the sheet rock that was damaged as well as the baseboard on my home. He's capable of a lot and I highly recomment hiring him for your next project.",
   },
   {
-    name: "Adam P.",
-    source: "Google",
+    name: "Alex T.",
     review:
-      "Can't believe the difference in my patio after a good pressure wash. A++",
+      "Larry is a professional, he is proficient with his work and can get things done in a timely manner. Will hire him again for future projects.",
   },
   {
-    name: "Maria L.",
-    source: "Angies List",
+    name: "Anatolii D.",
     review:
-      "This guy can use some tools! I have a brand new deck and it only took one weekend!",
+      "We're glad we went with Larry's team because they did an awesome job helping us out with some of our projects that we had, Larry does a great job communicating and they did an outstanding job replacing windows and painted our house!",
   },
   {
-    name: "Michael J.",
-    source: "Craig's List",
-    review: "New hurricane windows put up in just one afternon. Huge thanks!",
+    name: "давид ч.",
+    review: "Well done master, hands on, it’s a pleasure to deal with such a person",
+  },
+  {
+    name: "Deanna Z.",
+    review: "I got Larry recommended to me by a friend and I’m glad that I went with him to do some remodeling at our home, his prices are fair and they did a great job and finished everything within a week from start to finish. Larry and his team are professionals worth hiring!",
   },
 ];
 

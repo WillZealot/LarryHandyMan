@@ -47,6 +47,12 @@ const HomeInfo = () => {
           <li>Fire Damage</li>
           <li>Painting</li>
           <li>Demolition</li>
+          <li>Carpentry</li>
+          <li>Trim Replacement</li>
+          <li>Renovations</li>
+          <li>Soffit Repair</li>
+          <li>Water leak & damage</li>
+          <li>Trash Haul</li>
         </ul>
       </Flex>
       <motion.div

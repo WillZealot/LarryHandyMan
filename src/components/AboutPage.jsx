@@ -72,7 +72,7 @@ const AboutPage = () => {
         </div>
       </section> */}
 
-      <section className="bg-gray-300 pt-7 pb-10">
+      {/* <section className="bg-gray-300 pt-7 pb-10">
         <div className="md:grid grid-cols-5">
           <div></div>
           <img
@@ -96,7 +96,7 @@ const AboutPage = () => {
             </Link>
           </div>
         </div>
-      </section>
+      </section> */}
     </>
   );
 };
