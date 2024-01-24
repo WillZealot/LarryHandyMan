@@ -16,7 +16,7 @@ import { ServiceContext } from "../utils/ServiceContext";
 import DialogSheet from "./DialogSheet";
 
 const ContactPage = () => {
-  emailjs.init("vQQH70qDYKpC1O0tc");
+  emailjs.init("uS4JKS5KrzcNLqctZ");
   const [selectedService, setSelectedService] = useState(null);
   const [loading, setLoading] = useState(false);
   const [dialogOpen, setDialogOpen] = useState(false);
@@ -29,10 +29,10 @@ const ContactPage = () => {
 
     emailjs
       .sendForm(
-        "service_cqh32ue",
-        "template_mdoont9",
+        "service_jdks8et",
+        "template_07yovwk",
         e.target,
-        "vQQH70qDYKpC1O0tc"
+        "uS4JKS5KrzcNLqctZ"
       )
       .then(
         () => {
